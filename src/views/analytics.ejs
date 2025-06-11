@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Analytics</title>
+	</head>
+	<body>
+		<h1>Analytics</h1>
+
+		<h2>Usage Statistics</h2>
+		<ul>
+			<li>Total Views: <%= analytics.totalViews %></li>
+			<li>Total Starts: <%= analytics.totalStarts %></li>
+			<li>Total Completed: <%= analytics.totalCompleted %></li>
+		</ul>
+
+		<h2>Users Last Run</h2>
+		<ul>
+			<% usersSessions.forEach(user => { %>
+			<li><strong><%= user.email %></strong> : <%= user.lastRun %></li>
+			<% }) %>
+		</ul>
+	</body>
+</html>
